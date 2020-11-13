@@ -11,7 +11,7 @@
 function sayHello(name) {
     return("Hello, " + name)
 }
-console.log(sayHello());
+console.log(sayHello("Codeup"));
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -60,10 +60,10 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 function isTwo(number) {
 
-    if (number != 2) {
-        return false;
-    } else {
+    if (number === 2) {
         return true;
+    } else {
+        return false;
     }
 }
 console.log(isTwo(2));
@@ -83,8 +83,8 @@ console.log("random number is " + random);
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(x, y) {
-    return x * y;
+function calculateTip(bill, tip) {
+    return bill * tip;
 }
 
 /**
