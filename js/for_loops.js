@@ -26,17 +26,34 @@ for (var i = 0; i < 10; i++) {
 }
 
 // #3 Create a for loop that uses console.log to create
-// the output shown on exercise
+// the output shown below.
+// 1
+// 22
+// 333
+// 4444
+// 55555
+// 666666
+// 7777777
+// 88888888
+// 999999999
+
+for (var outer = 1; outer < 10; outer++) {
+    var output = '';
+
+
+    for(var inner = 1; inner <= outer; inner++) {
+        output = output + outer;
+    }
+    console.log(output);
+}
 
 
 // #4
 
-// function countDownByFive(num) {
-//     for (var i = 100; i > 5; i - 5) {
-//         console.log(num);
-//     }
-// }
 
-//countDownByFive(5);
+for (var i = 100; i >= 5; i -= 5) {
+    console.log(i);
+}
 
-// #5
+
+
