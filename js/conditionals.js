@@ -104,7 +104,7 @@ function calculateTotal(luckyNumber, billTotal) {
             return billTotal - billTotal*.25;
         case 3:
             return billTotal - billTotal*.35;
-        case 3:
+        case 4:
             return billTotal - billTotal*.50;
         case 5:
             return 0;
