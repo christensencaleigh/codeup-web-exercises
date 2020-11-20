@@ -1,0 +1,18 @@
+.fancy-header {
+    margin: 50px auto;
+    width: 500px;
+    padding: 10px;
+    font-family: Rockwell;
+}
+
+h2 {
+    color: darkred;
+    text-decoration: underline;
+}
+
+body {
+    background-color: rosybrown;
+    font-family: Rockwell;
+
+}
+
