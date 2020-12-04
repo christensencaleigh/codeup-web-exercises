@@ -1,8 +1,6 @@
-h1 {
-    text-align: center;
+header>h1 {
     opacity: .5;
+    font-weight: 400;
 }
 
-.card-header {
-    background-color: dodgerblue;
-}
+
