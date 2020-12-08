@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+</head>
+<body>
+<h1>Document Object Model</h1>
+
+<!--change html attributes-->
+
+<p>In this case JavaScript changes the value of the source attribute of an image.</p>
+<br>
+<button onclick="document.getElementById('myImage').src='../img/sign-check-icon.png'">Turn on</button>
+<img id="myImage" src="../img/power-off.png" alt="power off" width="100px">
+<button onclick="document.getElementById('myImage').src='../img/power-off.png'">Turn off</button>
+<br>
+
+</body>
+</html>
