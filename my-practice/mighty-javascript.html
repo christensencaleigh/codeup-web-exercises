@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>whole lotta javascript</title>
+</head>
+<body>
+<h1>What can Javascript do?</h1>
+
+<!--change html content-->
+
+<p id="content">Changing content in HTML</p>
+<button type="button" onclick="document.getElementById('content').innerHTML = 'Hello Javascript!'">Click me to see!</button>
+<br>
+<!--change HTML attributes-->
+
+<!--hiding HTML elements-->
+<p id="hidden">JavaScript can hide HTML elements.</p>
+
+<button type="button" onclick="document.getElementById('hidden').style.display='none'">Click me to disappear!</button>
+
+<!--javascript statements-->
+<h2>JavaScript Statements</h2>
+
+<p>A <strong>JavaScript program</strong> is a list of <strong>statements</strong> to be executed by a computer.</p>
+
+<p id="statement"></p>
+
+<script>
+	var x, y, z;  // Declare 3 variables
+	x = 7;    // Assign the value 7 to x
+	y = 14;    // Assign the value 14 to y
+	z = x + y;  // Assign the sum of x and y to z
+
+	document.getElementById('demo').innerHTML =
+		"The value of z is " + z + ".";
+</script>
+
+<!--javascript events-->
+<button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+<p id="event"></p>
+
+
+</body>
+</html>
