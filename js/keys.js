@@ -1,1 +1,0 @@
-let mapboxToken = 'pk.eyJ1IjoiY2hyaXN0ZW5zZW5jYWxlaWdoIiwiYSI6ImNraWpnODI3azAyZ3kycnFpczQ0MXVrcnoifQ.4'
