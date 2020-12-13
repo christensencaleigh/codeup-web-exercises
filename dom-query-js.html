@@ -28,6 +28,9 @@
 <button id="btn2">Change subheader</button>
 <button id="btn3">Change list <span><strong>items</strong></span></button>
 <button id="btn4">Change list <span><strong>item</strong></span></button>
+<button id="btn5">Change paragraph</button>
+
+
 <script>
     (function() {
         "use strict";
@@ -48,21 +51,13 @@
 
 		// TODO: Set text color on every other list item to grey
 		// TODO: Set text color of li with dbid = 1 to blue
-        // for (let i = 0; i < listItems.length; i++) {
-        // 	var listItem = listItems[i]
-		// 	if(i % 2 === 0) {
-		// 		listItem.style.color = 'purple'
-		// 	}
-		// 	if (listItem.getAttribute('data-dbid')=== "1") {
-        //     	listItem.style.color = 'blue'
-        //     }
-		// }
+
 
         // TODO: Uncomment the next line and get all elements with class name sub-paragraph
         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-		console.log(subParagraphs[0]);
-		// TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-       subParagraphs[0].innerText = 'Mission Accomplished!'
+		// console.log(subParagraphs[0]);
+		// // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
+       // subParagraphs[0].innerText = 'Mission Accomplished!'
 
         //add event listener to buttons
         //target=document, addEventListener, type=click, listener=function
@@ -104,6 +99,14 @@
 				}
 			}
 		})
+
+        //button to change sub-paragraph text
+        var btn5 = document.getElementById('btn5')
+
+		btn5.addEventListener('click', function() {
+			subParagraphs[0].innerHTML = 'Mission Accomplished!'
+        })
+
 
     })();
 </script>
