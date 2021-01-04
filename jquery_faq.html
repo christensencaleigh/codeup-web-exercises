@@ -13,6 +13,7 @@
 <body>
 
 <h1>National Parks FAQs:</h1>
+<h2 id="parks">Parks and Recreation</h2>
 <a href="#" id="toggle">Toggle Details</a>
 
 
@@ -57,12 +58,17 @@
     $(document).ready(function () {
         $('dd').addClass('invisible');
         $("#toggle").click(function () {
-        	$("dd").toggleClass('invisible')
+        	$("dd").toggleClass('invisible');
         });
 
         $("dt").click(function () {
-            $(this).toggleClass('highlighted')
+            $(this).toggleClass('highlighted');
 		});
+
+        $("#parks").click(function () {
+         $(this).html("Leslie Knope is the greatest national park employee!");
+        })
+
 	});
 </script>
 
