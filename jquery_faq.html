@@ -4,7 +4,67 @@
     <meta charset="utf-8">
     <title></title>
 </head>
+<style>
+    .invisible { visibility: hidden}
+    /*.invisible { display: none}*/
+    .highlighted {background-color: lightseagreen}
+
+</style>
 <body>
+
+<h1>National Parks FAQs:</h1>
+<a href="#" id="toggle">Toggle Details</a>
+
+
+<!--(dl = description or definition list)-->
+<!--(dt = description term)-->
+<!--(dd = description details)-->
+<dl>
+   <dt>Who is the director of the National Park Service?</dt>
+    <dd>Margaret Everson, Counselor to the Secretary, is exercising the delegated authority of the Director of the National Park Service.</dd>
+    <br>
+    <dt>How many employees are in the National Park Service?</dt>
+    <dd>Permanent, temporary, and seasonal employees: Approximately 20,000.</dd>
+    <br>
+    <dt>How old is the National Park System?</dt>
+    <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+    <br>
+    <dt>What is the nation's first national park?</dt>
+    <dd>Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park.</dd>
+    <br>
+    <dt>How many people visit the national parks?</dt>
+    <dd class=>Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
+    <br>
+    <dt>What is the number one most visited national park in 2019?</dt>
+    <dd>Great Smoky Mountains National Park</dd>
+    <br>
+    <dt>WHat is the second most visited national park?</dt>
+    <dd>Grand Canyon National Park</dd>
+    <br>
+    <dt>What is the third most visited national park? </dt>
+    <dd>Rocky Mountain National Park</dd>
+    <br>
+    <dt>What is the fourth most visited national park?</dt>
+    <dd>Zion National Park</dd>
+    <br>
+    <dt>What is the fifth most visited national park?</dt>
+    <dd>Yellowstone National Park</dd>
+</dl>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $('dd').addClass('invisible');
+        $("#toggle").click(function () {
+        	$("dd").toggleClass('invisible')
+        });
+
+        $("dt").click(function () {
+            $(this).toggleClass('highlighted')
+		});
+	});
+</script>
 
 </body>
 </html>
