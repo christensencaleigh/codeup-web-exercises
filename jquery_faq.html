@@ -2,12 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>jQuery Methods</title>
 </head>
 <style>
-    .invisible { visibility: hidden}
+    .invisible {
+        visibility: hidden
+    }
+
     /*.invisible { display: none}*/
-    .highlighted {background-color: lightseagreen}
+    .highlighted {
+        background-color: yellow
+    }
+
+    .bold {
+        font-weight: bold;
+    }
+
+    .blue {
+        color: blue;
+    }
 
 </style>
 <body>
@@ -16,58 +29,99 @@
 <h2 id="parks">Parks and Recreation</h2>
 <a href="#" id="toggle">Toggle Details</a>
 
-
 <!--(dl = description or definition list)-->
 <!--(dt = description term)-->
 <!--(dd = description details)-->
-<dl>
-   <dt>Who is the director of the National Park Service?</dt>
-    <dd>Margaret Everson, Counselor to the Secretary, is exercising the delegated authority of the Director of the National Park Service.</dd>
-    <br>
-    <dt>How many employees are in the National Park Service?</dt>
-    <dd>Permanent, temporary, and seasonal employees: Approximately 20,000.</dd>
-    <br>
-    <dt>How old is the National Park System?</dt>
-    <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
-    <br>
-    <dt>What is the nation's first national park?</dt>
-    <dd>Yellowstone National Park was established by an act signed by President Ulysses S. Grant on March 1, 1872, as the nation's first national park.</dd>
-    <br>
-    <dt>How many people visit the national parks?</dt>
-    <dd class=>Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
-    <br>
-    <dt>What is the number one most visited national park in 2019?</dt>
-    <dd>Great Smoky Mountains National Park</dd>
-    <br>
-    <dt>WHat is the second most visited national park?</dt>
-    <dd>Grand Canyon National Park</dd>
-    <br>
-    <dt>What is the third most visited national park? </dt>
-    <dd>Rocky Mountain National Park</dd>
-    <br>
-    <dt>What is the fourth most visited national park?</dt>
-    <dd>Zion National Park</dd>
-    <br>
-    <dt>What is the fifth most visited national park?</dt>
-    <dd>Yellowstone National Park</dd>
-</dl>
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<div>
+    <dl>
+        <dt>Who is the director of the National Park Service?</dt>
+        <dd>Margaret Everson, Counselor to the Secretary, is exercising the delegated authority of the Director of the
+            National Park Service.
+        </dd>
+        <br>
+        <dt>How many employees are in the National Park Service?</dt>
+        <dd>Permanent, temporary, and seasonal employees: Approximately 20,000.</dd>
+        <br>
+        <dt>How old is the National Park System?</dt>
+        <dd>The National Park Service was created by an act signed by President Woodrow Wilson on August 25, 1916.</dd>
+        <br>
+        <dt>What government agency oversees the National Park Service?</dt>
+        <dd>The National Park Service is a bureau of the Department of the Interior. Directly overseeing its operation is the department's Assistant Secretary for Fish, Wildlife and Parks.
+        </dd>
+        <br>
+        <dt>How many people visit the national parks?</dt>
+        <dd>Total recreation visitors to the national parks in 2019: 327,516,619.</dd>
+        <br>
+        <dt>What is the number one most visited national park in 2019?</dt>
+        <dd>Great Smoky Mountains National Park</dd>
+        <br>
+        <dt>WHat is the second most visited national park?</dt>
+        <dd>Grand Canyon National Park</dd>
+        <br>
+        <dt>What is the third most visited national park?</dt>
+        <dd>Rocky Mountain National Park</dd>
+        <br>
+        <dt>What is the fourth most visited national park?</dt>
+        <dd>Zion National Park</dd>
+        <br>
+        <dt>What is the fifth most visited national park?</dt>
+        <dd>Yosemite National Park</dd>
+    </dl>
+</div>
+<div>
+    <h3>Yellowstone National Park</h3>
+    <ul>
+        <li>It is the first national park.</li>
+        <li>Home of Old Faithful, a world-famous geyser, erupts every 92 minutes on average.</li>
+        <li>Yellowstone is larger than the state of Rhode Island and Delaware combined.</li>
+    </ul>
+    <h3>Big Bend National Park</h3>
+    <ul>
+        <li>With 450 bird species, there are more bird species in Big Bend than any other U.S. National Park.</li>
+        <li>The stars at night really are big and bright because Big Bend is so remote. The Milky Way rises in Big Bend during sunrise.</li>
+        <li>This region gets its name because the Rio Grande turns in the area in, well, a big bend.</li>
+    </ul>
+    <h3>Rocky Mountain National Park</h3>
+    <ul>
+        <li>There are rocks 1.7 billion years old in the park, and they are also some of the oldest in the National Parks System.</li>
+        <li>The Continental Divide runs through the park</li>
+        <li>Rocky Mountain National Park has 156 lakes</li>
+    </ul>
+    <button id="btn" type="button">PUSH</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 
 <script>
-    $(document).ready(function () {
-        $('dd').addClass('invisible');
-        $("#toggle").click(function () {
-        	$("dd").toggleClass('invisible');
-        });
-
-        $("dt").click(function () {
-            $(this).toggleClass('highlighted');
+	$(document).ready(function () {
+		$('dd').addClass('invisible');
+		$("#toggle").click(function () {
+			$("dd").toggleClass('invisible');
 		});
 
-        $("#parks").click(function () {
-         $(this).html("Leslie Knope is the greatest national park employee!");
-        })
+		$("dt").click(function () {
+			$(this).toggleClass('highlighted');
+		});
+
+		$("#parks").click(function () {
+			$(this).html("Leslie Knope is the greatest national park employee!");
+		})
+
+        $('#btn').click(function () {
+            $('ul').each(function () {
+                $(this).children().last().addClass('highlighted')
+			});
+		});
+
+        $('h3').click(function () {
+        	$(this).next().children("li").addClass('bold')
+		});
+
+        $('li').click(function() {
+        	$(this).parent().children().first().addClass('blue');
+        });
 
 	});
 </script>
