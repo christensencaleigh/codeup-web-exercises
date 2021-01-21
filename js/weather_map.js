@@ -53,16 +53,20 @@ $(document).ready(function () {
 			$("#cardFive").append('<p>' + "Wind: " + data.daily[4].wind_deg + '</p>');
 			$("#cardFive").append('<p>' + "Pressure: " + data.daily[4].pressure + '</p>');
 
-			//setting up my map
 
-
-
-
-
-
-			// console.log(data.daily);
+			console.log(data.daily);
 		});
-	}
 
+	}
 	getWeather(29.520065873672063, -98.60593488158992);
+
+
+	//setting up my map
+	mapboxgl.accessToken = mapboxToken;
+	var map = new mapboxgl.Map({
+		container: 'map',
+		style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+		center: [29.520065873672063, -98.60593488158992], // starting position
+		zoom: 9 // starting zoom
+	});
 });
