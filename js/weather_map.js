@@ -66,7 +66,7 @@ $(document).ready(function () {
 	var map = new mapboxgl.Map({
 		container: 'map',
 		style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-		center: [29.520065873672063, -98.60593488158992], // starting position
+		center: [-98.60593488158992, 29.520065873672063], // starting position
 		zoom: 9 // starting zoom
 	});
 });
